@@ -73,7 +73,7 @@
 
                 for(n = 0; n < pairs.length; n++) {
                     pair = pairs[n].split("=");
-                    s[decodeURIComponent(pair[0])] = pair.length > 1 ? decodeURIComponent(pair[1]) : "";
+                    s[decodeURIComponent(pair[0]).replace(/\+/g, ' ')] = pair.length > 1 ? decodeURIComponent(pair[1]).replace(/\+/g, ' ') : "";
                 }
             }
 
